@@ -22,9 +22,14 @@
 
     <q-footer>
       <q-tabs>
-        <q-route-tab to="/" icon="home" label="Home"/>
-        <q-route-tab to="/visitor" icon="menu_book" label="Visitor"/>
-        <q-route-tab to="/exhibitor" icon="shop" label="Exhibitor"/>
+        <q-route-tab
+          v-for="nav in navs"
+          :key=nav.to
+          :to="nav.to"
+          :icon="nav.icon" 
+          :label="nav.label"/>
+        
+        
       </q-tabs>
       
     </q-footer>
@@ -39,43 +44,19 @@
         <q-item-label header>Navigation</q-item-label>
 
         <q-item 
-          to="/"
+          v-for="nav in navs"
+          :key=nav.to
+          :to="nav.to"
           exact
           clickable >
           <q-item-section avatar>
-            <q-icon name="home" />
+            <q-icon :name="nav.icon" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>Home</q-item-label>
-            
+            <q-item-label>{{ nav.label }}</q-item-label>
           </q-item-section>
         </q-item>
 
-        <q-item 
-          to="/visitor"
-          exact
-          clickable >
-          <q-item-section avatar>
-            <q-icon name="menu_book" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Visitors</q-item-label>
-            
-          </q-item-section>
-        </q-item>
-        <q-item 
-          to="/exhibitor"
-          exact
-          clickable >
-          <q-item-section avatar>
-            <q-icon name="shop" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Exhibitors</q-item-label>
-            
-          </q-item-section>
-        </q-item>
-                
       </q-list>
     </q-drawer>
 
@@ -92,7 +73,26 @@ export default {
   name: 'MyLayout',
   data () {
     return {
-      leftDrawerOpen: false
+      leftDrawerOpen: false,
+      navs: [
+        {
+          label: 'Home',
+          icon:  'home',
+          to: '/'
+        },
+                {
+          label: 'Visitor',
+          icon:  'menu_book',
+          to: '/visitor'
+        },
+                {
+          label: 'Exhibitors',
+          icon:  'shop',
+          to: '/exhibitor'
+        }
+
+
+      ]
     }
   },
   methods: {
