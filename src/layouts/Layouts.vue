@@ -11,20 +11,22 @@
         <!-- <div>AD Quasar v{{ $q.version }}</div> -->
       </q-toolbar>
     </q-header>
-<!-- 
+
 
     <div class="q-pa-md">
-
-        <div class="row">
-          <div class="col">
-            .col
-          </div>
-          <div class="col">
-            .col
-          </div>
+      <div class="row">
+        .col
+      </div>
+      <div class="row">
+        <div class="col">
+          .col
         </div>
+        <div class="col">
+          .col
+        </div>
+      </div>
     </div>
- -->
+
 
     <q-footer>
       <q-tabs>

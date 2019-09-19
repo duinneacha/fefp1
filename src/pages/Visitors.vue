@@ -1,14 +1,16 @@
 <template>
-  <q-page padding>
+  <q-page class="q-pa-md">
     <h5>{{ visitorMessage }}</h5>
    
     <q-list bordered>
-      <q-item-label>Event List</q-item-label>
+      
 
       <q-item
          v-for="event in events"
          :key="event.id"
-         ripple>
+         @click="event.attending = !event.attending"
+         clickable
+         v-ripple>
          
          <q-item-section side top>
             <q-checkbox v-model="event.attending" />
@@ -46,7 +48,7 @@ export default {
           location: 'City Hall',
           date: '2019/07/23',
           time: 'am',
-          attending: false
+          attending: true
         },
         {
           id: 3,
