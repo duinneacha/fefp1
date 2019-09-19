@@ -1,0 +1,33 @@
+Front End Frameworks Project 1 - Book Fair
+
+Visitors
+--------
+{
+   emailAddress: string,
+   registeredTo: array[registrationID, . . .]
+}
+
+Events 
+------
+{
+   locationID: string -> location
+   stallNo
+
+
+}
+
+Locations
+---------
+
+{
+   locationID: string
+   locationDesc: string
+}
+
+
+{
+   
+}
+
+
+https://stackoverflow.com/questions/52099089/how-to-get-nested-json-data-in-vue-js

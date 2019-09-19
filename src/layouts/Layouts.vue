@@ -5,12 +5,26 @@
         
 
         <q-toolbar-title class="absolute-center">
-          Cork Book Fair
+          AD Cork Book Fair
         </q-toolbar-title>
 
         <!-- <div>AD Quasar v{{ $q.version }}</div> -->
       </q-toolbar>
     </q-header>
+<!-- 
+
+    <div class="q-pa-md">
+
+        <div class="row">
+          <div class="col">
+            .col
+          </div>
+          <div class="col">
+            .col
+          </div>
+        </div>
+    </div>
+ -->
 
     <q-footer>
       <q-tabs>
@@ -111,4 +125,13 @@ export default {
     }
     
   }
+  .row > div {
+  padding: 10px 15px;
+  background: rgba(86,61,124,.15);
+  // height: 100vh;
+  border: 1px solid rgba(86,61,124,.2);
+  }
+.row + .row {
+  margin-top: 1rem;
+}
 </style>
