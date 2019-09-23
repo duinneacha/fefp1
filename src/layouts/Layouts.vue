@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpr lFf">
+  <q-layout view="LHh lpr lFf">
     <q-header elevated class="glossy">
       <q-toolbar>
         
@@ -12,37 +12,18 @@
       </q-toolbar>
     </q-header>
 
-
-    <div class="q-pa-md">
-      <div class="row">
-        .col
-      </div>
-      <div class="row">
-        <div class="col">
-          .col
-        </div>
-        <div class="col">
-          .col
-        </div>
-      </div>
-    </div>
-
-
     <q-footer>
       <q-tabs>
         <q-route-tab
           v-for="nav in navs"
-          :key=nav.to
+          :key="nav.label"
           :to="nav.to"
           :icon="nav.icon" 
           :label="nav.label"/>
-        
-        
-      </q-tabs>
-      
+       </q-tabs>
     </q-footer>
 
-    <q-drawer
+     <q-drawer
       v-model="leftDrawerOpen"
       :breakpoint="767"
       :width="250"
@@ -70,7 +51,7 @@
 
       </q-list>
     </q-drawer>
-
+    
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -136,4 +117,5 @@ export default {
 .row + .row {
   margin-top: 1rem;
 }
+
 </style>

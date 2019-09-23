@@ -1,10 +1,10 @@
 {
   "name": "fefp1",
   "version": "0.0.1",
-  "description": "FEFP1",
-  "productName": "Quasar App",
+  "description": "Aidan Dennehy (R00145278) Front-End Frameworks Project 1 - Cork Book Fair",
+  "productName": "Cork Book Fair",
   "cordovaId": "org.cordova.quasar.app",
-  "author": "aidan.dennehy@mycit.ie",
+  "author": "Aidan Dennehy <aidan.dennehy@mycit.ie>",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
