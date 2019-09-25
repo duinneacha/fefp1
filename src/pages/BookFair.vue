@@ -19,7 +19,8 @@
       </q-card-section>
     </q-card>
   </div>
-   <div class="q-pa-md">
+
+  <div class="q-pa-md">
     <q-carousel
       swipeable
       animated
@@ -28,11 +29,25 @@
       :fullscreen.sync="fullscreen"
       infinite
     >
-      <q-carousel-slide :name="1" img-src="https://cdn.quasar.dev/img/mountains.jpg" />
-      <q-carousel-slide :name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg" />
-      <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg" />
-      <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg" />
-      <q-carousel-slide :name="5" img-src="./statics/adimgs/Adam Wyeth_Colour.jpg" />
+      <q-carousel-slide :name="1" img-src="./statics/carousel/31.jpg" />
+      <q-carousel-slide :name="2" img-src="./statics/carousel/32.jpg" />
+      <q-carousel-slide :name="3" img-src="./statics/carousel/33.jpg" />
+      <q-carousel-slide :name="4" img-src="./statics/carousel/34.jpg" />
+      <q-carousel-slide :name="5" img-src="./statics/carousel/35.jpg" />
+      <q-carousel-slide :name="6" img-src="./statics/carousel/36.jpg" />
+      <q-carousel-slide :name="7" img-src="./statics/carousel/37.jpg" />
+      <q-carousel-slide :name="8" img-src="./statics/carousel/38.jpg" />
+      <q-carousel-slide :name="9" img-src="./statics/carousel/39.jpg" />
+      <q-carousel-slide :name="10" img-src="./statics/carousel/40.jpg" />
+      <q-carousel-slide :name="11" img-src="./statics/carousel/41.jpg" />
+      <q-carousel-slide :name="12" img-src="./statics/carousel/42.jpg" />
+      <q-carousel-slide :name="13" img-src="./statics/carousel/43.jpg" />
+      <q-carousel-slide :name="14" img-src="./statics/carousel/44.jpg" />
+      <q-carousel-slide :name="15" img-src="./statics/carousel/45.jpg" />
+      <q-carousel-slide :name="16" img-src="./statics/carousel/46.jpg" />
+      <q-carousel-slide :name="17" img-src="./statics/carousel/47.jpg" />
+      <q-carousel-slide :name="18" img-src="./statics/carousel/48.jpg" />
+      <q-carousel-slide :name="19" img-src="./statics/carousel/49.jpg" />
 
       <template v-slot:control>
         <q-carousel-control

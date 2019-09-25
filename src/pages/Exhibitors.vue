@@ -1,6 +1,30 @@
 <template>
   <q-page padding>
     <h5>{{ exhibitorMessage }}</h5>
+
+    <div class="q-pa-md">
+        <q-card class="my-card">
+          <q-parallax
+            src="https://panoramicireland.com/images/osservicesbooking/services/1513430931_panoramic-ireland-New-York-Times-36-Hours-Cork.jpg"
+            
+            :height="200"
+          />
+
+          <q-card-section>
+            <div class="text-h2 text-center">{{ exhibitorMessage }}</div>
+            <div class="text-subtitle2">Book your stands at our Book Fair here</div>
+            <div class="text-subtitle2">In Cork City Hall and Pairc Ui Chaoimh 18th-22nd July </div>
+            
+            <q-btn
+              size="22px"
+              class="q-px-xl q-py-xs"
+              color="purple"
+              label="Book"
+            />
+         </q-card-section>
+        </q-card>
+      </div>
+
   </q-page>
 </template>
 
