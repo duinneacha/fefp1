@@ -1,7 +1,31 @@
 <template>
   <q-page class="q-pa-md">
-    <h5>{{ visitorMessage }}</h5>
-   
+
+
+    <div class="q-pa-md">
+        <q-card class="my-card">
+          <q-parallax
+            src="https://panoramicireland.com/images/osservicesbooking/services/1513430931_panoramic-ireland-New-York-Times-36-Hours-Cork.jpg"
+            
+            :height="200"
+          />
+
+          <q-card-section>
+            <div class="text-h2 text-center">{{ visitorMessage }}</div>
+            <div class="text-subtitle2">Register and book your tickets</div>
+            <div class="text-subtitle2">In Cork City Hall and Pairc Ui Chaoimh 18th-22nd July </div>
+            
+            <q-btn
+              size="22px"
+              class="q-px-xl q-py-xs"
+              color="blue"
+              label="Register"
+            />
+         </q-card-section>
+        </q-card>
+      </div>
+
+    <h6>List of Exhibitors</h6>
     <q-list bordered>
       
 
@@ -24,6 +48,8 @@
       </q-item>
       
     </q-list>
+
+
 
     <div class="row q-ma-md">
     <div class="col-12">
@@ -128,7 +154,7 @@ export default {
 
   data() {
     return {
-      visitorMessage: 'Visitors Page',
+      visitorMessage: 'Welcome Visitors',
       events: [
         {
           id: 1,

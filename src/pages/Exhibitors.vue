@@ -1,7 +1,6 @@
 <template>
   <q-page padding>
-    <h5>{{ exhibitorMessage }}</h5>
-
+    
     <div class="q-pa-md">
         <q-card class="my-card">
           <q-parallax
