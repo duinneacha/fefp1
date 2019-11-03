@@ -4,11 +4,16 @@
     <h1>AD</h1> -->
     <div class="q-pa-md">
     <q-card class="my-card">
-      <q-parallax
+      <!-- <q-parallax
         src="https://panoramicireland.com/images/osservicesbooking/services/1513430931_panoramic-ireland-New-York-Times-36-Hours-Cork.jpg"
         
         :height="200"
+      /> -->
+      <q-img
+         src="https://panoramicireland.com/images/osservicesbooking/services/1513430931_panoramic-ireland-New-York-Times-36-Hours-Cork.jpg"
+         :ratio="16/9"
       />
+
 
       <q-card-section>
         <div class="text-h2 text-center">Introduction</div>
