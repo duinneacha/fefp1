@@ -12,17 +12,21 @@
 
           <q-img
             src="https://panoramicireland.com/images/osservicesbooking/services/1513430931_panoramic-ireland-New-York-Times-36-Hours-Cork.jpg"
-            :ratio="16/9"
+             sizes="(max-width: 400px) 400w,
+              (min-width: 400px) and (max-width: 800px) 800w,
+              (min-width: 800px) and (max-width: 1200px) 1200w,
+              (min-width: 1200px) 1600w"
+            style="height: 280px; width: 100%"
            />
           <q-card-section>
-            <div class="text-h2 text-center">{{ visitorMessage }}</div>
+            <div class="text-h4 text-center">{{ visitorMessage }}</div>
             <div class="text-subtitle2">Register and book your tickets</div>
             <div class="text-subtitle2">In Cork City Hall and Pairc Ui Chaoimh 18th-22nd July </div>
 
             
             <div class="q-pa-md q-gutter-sm">
               <q-btn 
-                label="Terms"
+                label="Rules and Regulations"
                 color="primary" 
                 size="22px"
                 class="q-px-xl q-py-xs"
@@ -48,9 +52,6 @@
 <!--  -->
 
       <div class="q-pa-md q-gutter-sm">
-      
-          
-      
       
           <q-dialog v-model="termsDisplay">
             <q-card>
@@ -242,49 +243,61 @@
     
     <!-- Show Conformation -->
     <q-dialog v-model="showConfirmation">
-       <q-card>
-           <q-img src="https://i.imgur.com/pO1Yq1Wb.jpg" />
+       <div class="q-pa-md q-gutter-sm">
+      
+        <q-card>
+            <q-img 
+              src="https://i.imgur.com/pO1Yq1Wb.jpg"
+                 sizes="(max-width: 400px) 400w,
+              (min-width: 400px) and (max-width: 800px) 800w,
+              (min-width: 800px) and (max-width: 1200px) 1200w,
+              (min-width: 1200px) 1600w"
+            style="height: 280px; width: 100%"
+            :ratio="16/9"
+              contain
+               />
 
 
-        <q-card-section>
+          <q-card-section>
 
-          <h1>Confirmed!</h1>
-          <!-- <div class="text-subtitle1">Please choose from the following options</div> -->
-          <!-- <div class="text-subtitle2 text-grey">
-            <p>Regular tickets dated 18 and 19 July can enjoy one-time free admission on 20, 21or 22 July after 5pm by presenting the whole stub attached to the admission ticket.</p>
-            <p>Morning Admission Ticket (entry before 12:00 noon): 3 euros (available for sale each day during the event).</p>
-          </div> -->
-        </q-card-section>
+            <h6>Confirmed!</h6>
+            <!-- <div class="text-subtitle1">Please choose from the following options</div> -->
+            <!-- <div class="text-subtitle2 text-grey">
+              <p>Regular tickets dated 18 and 19 July can enjoy one-time free admission on 20, 21or 22 July after 5pm by presenting the whole stub attached to the admission ticket.</p>
+              <p>Morning Admission Ticket (entry before 12:00 noon): 3 euros (available for sale each day during the event).</p>
+            </div> -->
+          </q-card-section>
 
-        <q-separator />
+          <q-separator />
 
-        <q-card-actions align="right">
-          <q-btn 
-             color="secondary"
-             icon-right="mail"
-             :loading="loadingEmail"
-             @click="simulateEmail()">
-             Email Receipt
-             <template v-slot:loading>
-              <q-spinner-hourglass class="on-left" />
-              Sending...
-           </template>
-          </q-btn>
+          <q-card-actions align="right">
+            <q-btn 
+              color="secondary"
+              icon-right="mail"
+              :loading="loadingEmail"
+              @click="simulateEmail()">
+              Email Receipt
+              <template v-slot:loading>
+                <q-spinner-hourglass class="on-left" />
+                Sending...
+            </template>
+            </q-btn>
 
-          <q-btn
-             color="red" 
-             icon-right="print"
-             :loading="loadingPrint"
-             @click="simulatePrint()">
-             Print Receipt
-            <template v-slot:loading>
-              <q-spinner-hourglass class="on-left" />
-              Printing...
-           </template>
-          </q-btn>
+            <q-btn
+              color="red" 
+              icon-right="print"
+              :loading="loadingPrint"
+              @click="simulatePrint()">
+              Print Receipt
+              <template v-slot:loading>
+                <q-spinner-hourglass class="on-left" />
+                Printing...
+            </template>
+            </q-btn>
 
-        </q-card-actions>
-      </q-card>
+          </q-card-actions>
+        </q-card>
+      </div>
     </q-dialog>
 
   </q-page>

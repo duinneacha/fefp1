@@ -9,8 +9,24 @@
         
         :height="200"
       /> -->
-      <q-img
+      <!-- <q-img
          src="https://panoramicireland.com/images/osservicesbooking/services/1513430931_panoramic-ireland-New-York-Times-36-Hours-Cork.jpg"
+          sizes="(max-width: 400px) 400w,
+              (min-width: 400px) and (max-width: 800px) 800w,
+              (min-width: 800px) and (max-width: 1200px) 1200w,
+              (min-width: 1200px) 1600w"
+            style="height: 280px; width: 100%"
+         :ratio="16/9"
+      />
+       -->
+      <q-img
+         src="./statics/cbf_logo.svg"
+          sizes="(max-width: 400px) 400w,
+              (min-width: 400px) and (max-width: 800px) 800w,
+              (min-width: 800px) and (max-width: 1200px) 1200w,
+              (min-width: 1200px) 1600w"
+            style="height: 280px; width: 100%"
+            contain
          :ratio="16/9"
       />
 
