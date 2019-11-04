@@ -28,6 +28,26 @@
         </q-card>
       </div>
 
+      <q-dialog v-model="exhibitorBook">
+        <q-card>
+          <q-toolbar>
+            <q-avatar>
+              <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
+            </q-avatar>
+  
+            <q-toolbar-title><span class="text-weight-bold">Quasar</span> Framework</q-toolbar-title>
+  
+            <q-btn flat round dense icon="close" v-close-popup />
+          </q-toolbar>
+  
+          <q-card-section>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus sit voluptate voluptas eveniet porro. Rerum blanditiis perferendis totam, ea at omnis vel numquam exercitationem aut, natus minima, porro labore.
+          </q-card-section>
+        </q-card>
+      </q-dialog>
+
+
+
   </q-page>
 </template>
 
@@ -35,6 +55,7 @@
 export default {
   data() {
     return {
+      exhibitorBook: true,
       exhibitorMessage: 'Exhibitor',
       exhibitors: [
         {
