@@ -159,7 +159,18 @@
      </div>
    
      
+    
+    <!-- // Exhibitor Tree -->
     <q-btn color="blue" class="full-width q-mt-md" label="List of Exhibitors" />
+    <div class="q-pa-md q-gutter-sm">
+    <q-tree
+      :nodes="bookExhibitors"
+      accordion
+      node-key="label"
+      :expanded.sync="expanded"
+    />
+   </div>
+
     <q-list bordered>
       
 
@@ -550,8 +561,107 @@ export default {
           title: "The Canterbury Tales",
           year: 1450
         }
-      ]
+      ],
+      
+      bookExhibitors: [
+        {
+          label: 'Exhibitors',
+          children: [
+            {
+              label: 'Fantasy',
+              children: [
+                {
+                  label: 'Cambridge University Press',
+                  children: [
+                    {label: 'City Hall - Booth 23'},
+                    {label: 'Pairc Ui Chaoimh - Booth L4'},
+                    {label: 'Website - www.cup.co.uk'},
+                    {
+                      label: 'Books',
+                      children: [
+                        {label: 'One Flew Over the Cuckoos Nest'},
+                        {label: 'The Stranger'},
+                        {label: 'Wuthering Heights'},
+                        {label: 'Poems of Ireland'},
+                        {label: 'Polish Songs'},
+                        {label: 'American Rap'}
+                      ]
+                    }
+                  ]
+                },
+                {
+                  label: 'Association of Taipei Publishers',
+                  children: [
+                    {label: 'City Hall - Booth 13'},
+                    {label: 'Pairc Ui Chaoimh - Booth L1'},
+                    {label: 'Website - www.ATP.cn'},
+                    {
+                      label: 'Books',
+                      children: [
+                        {label: 'The Witcher'},
+                        {label: 'The Other Stranger'},
+                        {label: 'Great Heights'},
+                        {label: 'Poems of Beijing'}
+                        
+                      ]
+                    }
+                  ]
+                }
 
+              ]
+            },
+            {
+              label: 'True Life',
+              children: [
+                {
+                  label: 'New York Publishers',
+                  children: [
+                    {label: 'City Hall - Booth 2'},
+                    {label: 'Pairc Ui Chaoimh - Booth L1'},
+                    {label: 'Website - www.NYP.com'},
+                    {
+                      label: 'Books',
+                      children: [
+                        {label: 'One Flew Over the Cuckoos Nest'},
+                        {label: 'The Stranger'},
+                        {label: 'Wuthering Heights'},
+                        {label: 'Poems of Ireland'},
+                        {label: 'Polish Songs'},
+                        {label: 'American Rap'}
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              label: 'Sports',
+              children: [
+                {
+                  label: 'Association of Limerick Puclishers',
+                  children: [
+                    {label: 'City Hall - Booth 9'},
+                    {label: 'Pairc Ui Chaoimh - Booth L7'},
+                    {label: 'Website - www.ALR.ie'},
+                    {
+                      label: 'Books',
+                      children: [
+                        {label: 'Cork Wonder Years'},
+                        {label: 'Carrigtwohill Still On Top'},
+                        {label: 'Limerick Wasted Years'},
+                        {label: 'Ballads of East Cork'}
+                        
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        
+      ],
+      expanded: ['Exhibitors']
     }
   },
   methods: {

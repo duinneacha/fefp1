@@ -1,15 +1,71 @@
 <template>
   <q-layout view="LHh lpr lFf">
+
+        
     <q-header elevated class="glossy">
       <q-toolbar>
         
 
-        <q-toolbar-title class="absolute-center">
-          AD Cork Book Fair
+        <q-toolbar-title class="absolute-center text-weight-bold">
+          Cork Book Fair
         </q-toolbar-title>
+        <q-btn
+          flat
+          color="white"
+          @click="openURL('https://www.facebook.com/aidan.dennehy')"
+          icon="thumb_up"
+          class="absolute-right"
+          label=""/>
 
-        <!-- <div>AD Quasar v{{ $q.version }}</div> -->
+        <q-btn 
+          color="red"
+          v-if="!subscribe"
+          v-model="subscribe"
+          @click="subscriber()"
+          size="sm"
+          class="left" 
+          label="Subscribe">
+        </q-btn>
+          
+          <q-btn 
+          color="green"
+          v-model="subscribe"
+          v-else
+          size="sm"
+          @click="subscriber()"
+          class="left subsc" 
+          label="Subscribed">
+          
+
+          <!-- v-if="$q.screen.gt.xs" -->
+          
+          
+        </q-btn>
+        
+  
       </q-toolbar>
+
+
+        <!-- <div class="q-pa-md q-gutter-sm"> -->
+  
+          <q-dialog v-model="prompt" persistent>
+            <q-card style="min-width: 350px">
+              <q-card-section>
+                <div class="text-h6">Your Email</div>
+              </q-card-section>
+
+              <q-card-section>
+                <q-input dense v-model="emailAddress" autofocus @keyup.enter="prompt = false" />
+              </q-card-section>
+
+              <q-card-actions align="right" class="text-primary">
+                <q-btn flat label="Cancel" v-close-popup />
+                <q-btn flat label="Add Email" v-close-popup />
+              </q-card-actions>
+            </q-card>
+          </q-dialog>
+     <!-- </div> -->
+        
     </q-header>
 
     <q-footer>
@@ -50,8 +106,12 @@
         </q-item>
 
       </q-list>
+    
+    
     </q-drawer>
     
+    
+
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -65,6 +125,9 @@ export default {
   name: 'MyLayout',
   data () {
     return {
+      emailAddress: 'Email',
+      prompt: false,
+      subscribe: false,
       leftDrawerOpen: false,
       navs: [
         {
@@ -88,7 +151,13 @@ export default {
     }
   },
   methods: {
-    openURL
+    openURL,
+    subscriber() {
+      console.log("In subscribe")
+      this.prompt = true
+      this.subscribe = !this.subscribe
+      
+    }
   }
 }
 </script>
@@ -97,6 +166,10 @@ export default {
   @media screen and (min-width: 768px) {
     .q-footer {
       display: none;
+    }
+
+    .subsc {
+      font-size: .5em;
     }
   }
 

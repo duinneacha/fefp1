@@ -32,10 +32,11 @@
 
 
       <q-card-section>
-        <div class="text-h2 text-center">Introduction</div>
-        <div class="text-subtitle2">In Cork City Hall and Pairc Ui Chaoimh 18th-22nd July </div>
+        <!-- <div class="text-h2 text-center">Introduction</div> -->
+        <div class="text-subtitle2">Cork City Hall and Pairc Ui Chaoimh 18th-22nd July </div>
         <div class="row">
-          <p> {{ lorem }} </p>
+          <p> World Class Writers, Sensational Books, The Top Exhibitors</p>
+          <p>All in Cork</p>
         </div>
       </q-card-section>
     </q-card>
