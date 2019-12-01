@@ -33,7 +33,7 @@
 
       <q-card-section>
         <!-- <div class="text-h2 text-center">Introduction</div> -->
-        <div class="text-subtitle2">Cork City Hall and Pairc Ui Chaoimh 18th-22nd July </div>
+        <div class="text-subtitle2">Enterprise Ireland and Higher Education Ireland welcome you to the Cork City Hall and Pairc Ui Chaoimh 18th-22nd July </div>
         <div class="row">
           <p> World Class Writers, Sensational Books, The Top Exhibitors</p>
           <p>All in Cork</p>
